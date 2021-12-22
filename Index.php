@@ -1,5 +1,8 @@
 <?php
+    session_start();
     require_once 'databaseConnection.php';
+    require_once 'sendMail.php';
+
     $fname=$lname=$email="";
     $fnameErr=$lnameErr=$emailErr=$vcodeErr=NULL;
     $firstname=$lastname=$emailid="";
@@ -32,7 +35,17 @@
             $check=$mysqli->query("SELECT * FROM visitor_det WHERE email='$email'");
             if(mysqli_num_rows($check) == 0)
             {
-                echo"hello"; 
+                // echo"Success"; 
+                $insert=$mysqli->query("INSERT INTO visitor_det(fname,lname,email,vkey,action)VALUES('$fname','$lname','$email','$vkey','$action')");
+                if($insert){                    
+                    $_SESSION['fname']=$fname;
+                    $_SESSION['lname']=$lname;
+                    SendMail($fname,$lname,$email,$vkey);
+                }else{
+                    echo"Mail not sent."; 
+                }
+            }else{
+                echo"You are already register"; 
             }
         }
     }

@@ -2,6 +2,7 @@
     require_once 'databaseConnection.php'; 
     function SendMail($fname,$lname,$email,$vkey){
       // If you're using Composer (recommended)
+         header('location:thankyou.php?');
         $email = new \SendGrid\Mail\Mail(); 
         $email->setFrom("fmc202158@zealeducation.com", "Prasad Sanap");
         $email->setSubject("XKCD Comics");
@@ -19,7 +20,7 @@
         } catch (Exception $e) {
             echo 'Caught exception: '. $e->getMessage() ."\n";
         }
-        header('location:thankyou.php?');
+       
     }
    
 ?>

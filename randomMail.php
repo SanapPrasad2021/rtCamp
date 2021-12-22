@@ -4,25 +4,25 @@ require_once 'config.php';
 require 'vendor/autoload.php';
 
 class AutoSendingMail{
-    function SendMail($receiver,$urlImg){
+    function SendMail($receiver,$urlImg,$imgTitle){
         $to=implode("",$receiver);
-        $subject="XKCD Comics";
-        $message="This is lovely XKCD comics picture.<br><img src=".$urlImg."><br><br><br><br><p>
-        Unsubscribe or change your email preferences click on below link.</p><br><p>https://sample-ps-website.herokuapp.com/unsubscribe.php</p>";
-        $sender ="From: fmc202158@zealeducation.com\r\n";
-        $sender .= "MIME-Version: 1.0"."\r\n";
-        $sender .="Content-type:text/html;charset=UTF-8"."\r\n";
-        mail($to,$subject,$message,$sender);
+        // $subject="XKCD Comics";
+        // $message="This is lovely XKCD comics picture.<br><img src=".$urlImg."><br><br><br><br><p>
+        // Unsubscribe or change your email preferences click on below link.</p><br><p>https://sample-ps-website.herokuapp.com/unsubscribe.php</p>";
+        // $sender ="From: fmc202158@zealeducation.com\r\n";
+        // $sender .= "MIME-Version: 1.0"."\r\n";
+        // $sender .="Content-type:text/html;charset=UTF-8"."\r\n";
+        // mail($to,$subject,$message,$sender);
 
         // If you're using Composer (recommended)
         $email = new \SendGrid\Mail\Mail(); 
         $email->setFrom("fmc202158@zealeducation.com", "Prasad Sanap");
         $email->setSubject("XKCD Comics");
-        $email->addTo("$receiver");
-        // $email->addContent("text/plain", "");
+        $email->addTo("$to","User Details");
+        $email->addContent("text/plain","This is message from XKCD Comics.");
         $email->addContent(
-            "text/html", "<strong>This is lovely XKCD comics picture.<br>Title:$imgTitle<br></strong><img src=".$urlImg."><br><br><br><br>
-            Unsubscribe or change your email preferences click on below link.</p><br><p>https://sample-ps-website.herokuapp.com/unsubscribe.php</p>";
+            "text/html", "<strong>This is lovely XKCD comics picture.<br>Title:".$imgTitle."<br></strong><img src=".$urlImg."><br><br><br><br>
+            Unsubscribe or change your email preferences click on below link.</p><br><p>https://sample-ps-website.herokuapp.com/unsubscribe.php</p>"
         );
         $sendgrid = new \SendGrid(SENDGRID_API_KEY);
         try {
@@ -67,7 +67,7 @@ echo $imgUrl;
 // Foreach array loop and send email to them.
 foreach($array as $val){
     print_r($val);
-    $asm->SendMail($val,$imgUrl);
+    $asm->SendMail($val,$imgUrl,$imgTitle);
 }
 
 ?>

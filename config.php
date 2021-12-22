@@ -1,0 +1,4 @@
+<?php
+define('SENDGRID_API_KEY','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');
+
+?>

@@ -22,7 +22,7 @@ class AutoSendingMail{
         $email->addContent("text/plain","This is message from XKCD Comics.");
         $email->addContent(
             "text/html", "<strong>This is lovely XKCD comics picture.<br>Title:".$imgTitle."<br></strong><img src=".$urlImg."><br><br><br><br>
-            Unsubscribe or change your email preferences click on below link.</p><br><p>https://sample-ps-website.herokuapp.com/unsubscribe.php</p>"
+            Unsubscribe or change your email preferences click on below link.</p><br><a href=https://sample-ps-website.herokuapp.com/unsubscribe.php>unsubscribe</a>"
         );
         $sendgrid = new \SendGrid(SENDGRID_API_KEY);
         try {

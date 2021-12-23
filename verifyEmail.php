@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $vkeyErr="";
     require_once 'databaseConnection.php';
     if(isset($_POST['verify']))
     {      

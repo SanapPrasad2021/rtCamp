@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once 'sendMail.php';
+//     require_once 'sendMail.php';
     if(isset($_POST['goToVerify'])){
         header("location:verifyEmail.php");
     } 

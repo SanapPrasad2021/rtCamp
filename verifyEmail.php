@@ -49,7 +49,7 @@
         <tr>
           <th colspan="2">
             <?php
-              echo "<p class='text-primary display-3 text-wrap fw-bold'> ---" . $_SESSION['fname']." ". $_SESSION['lname'].  "---</p>";
+              echo "<p class='text-primary display-3 text-wrap fw-bold'> ---". $_SESSION['fname']." ". $_SESSION['lname'].  "---</p>";
             ?>
           </th>
         </tr>

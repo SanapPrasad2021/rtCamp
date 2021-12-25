@@ -1,15 +1,24 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '277803969b189a67d141d70a296846fac0213a9a',
-        'name' => 'sendgrid/sendgrid',
-        'dev' => false,
+        'reference' => NULL,
+        'name' => '__root__',
+        'dev' => true,
     ),
     'versions' => array(
+        '__root__' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
         'sendgrid/php-http-client' => array(
             'pretty_version' => '3.14.0',
             'version' => '3.14.0.0',
@@ -20,12 +29,12 @@
             'dev_requirement' => false,
         ),
         'sendgrid/sendgrid' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '7.11.1',
+            'version' => '7.11.1.0',
             'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
+            'install_path' => __DIR__ . '/../sendgrid/sendgrid',
             'aliases' => array(),
-            'reference' => '277803969b189a67d141d70a296846fac0213a9a',
+            'reference' => '071eac6de115e8c0ead18a7ebdad7c19043f07e4',
             'dev_requirement' => false,
         ),
         'sendgrid/sendgrid-php' => array(

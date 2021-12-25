@@ -1,9 +1,14 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "907e285f65325b51e424d991537f18af",
     "packages": [
         {
             "name": "sendgrid/php-http-client",
             "version": "3.14.0",
-            "version_normalized": "3.14.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sendgrid/php-http-client.git",
@@ -30,9 +35,7 @@
             "suggest": {
                 "composer/ca-bundle": "Including this library will ensure that a valid CA bundle is available for secure connections"
             },
-            "time": "2021-03-24T20:45:06+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "SendGrid\\": "lib/"
@@ -65,12 +68,11 @@
                 "issues": "https://github.com/sendgrid/php-http-client/issues",
                 "source": "https://github.com/sendgrid/php-http-client/tree/3.14.0"
             },
-            "install-path": "../sendgrid/php-http-client"
+            "time": "2021-03-24T20:45:06+00:00"
         },
         {
             "name": "sendgrid/sendgrid",
             "version": "7.11.1",
-            "version_normalized": "7.11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sendgrid/sendgrid-php.git",
@@ -99,9 +101,7 @@
                 "squizlabs/php_codesniffer": "3.*",
                 "swaggest/json-diff": "^3.4"
             },
-            "time": "2021-12-15T21:06:20+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "SendGrid\\Contacts\\": "lib/contacts/",
@@ -133,12 +133,11 @@
                 "issues": "https://github.com/sendgrid/sendgrid-php/issues",
                 "source": "https://github.com/sendgrid/sendgrid-php/tree/7.11.1"
             },
-            "install-path": "../sendgrid/sendgrid"
+            "time": "2021-12-15T21:06:20+00:00"
         },
         {
             "name": "starkbank/ecdsa",
             "version": "0.0.5",
-            "version_normalized": "0.0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/starkbank/ecdsa-php.git",
@@ -153,9 +152,7 @@
             "require": {
                 "php": ">=5.5"
             },
-            "time": "2021-06-06T22:24:49+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "files": [
                     "src/ellipticcurve.php"
@@ -179,9 +176,16 @@
                 "issues": "https://github.com/starkbank/ecdsa-php/issues",
                 "source": "https://github.com/starkbank/ecdsa-php/tree/v0.0.5"
             },
-            "install-path": "../starkbank/ecdsa"
+            "time": "2021-06-06T22:24:49+00:00"
         }
     ],
-    "dev": true,
-    "dev-package-names": []
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
 }
